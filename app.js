@@ -1,10 +1,10 @@
 const readline = require('readline')
-const { generateMeta } = require('./controllers/openaiController.js')
+const { generateMeta, generateImage } = require('./controllers/openaiController.js')
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 })
 
-console.log('test')
-rl.question("YouTube Video Title: \n", (title) => generateMeta(title))
+//rl.question("YouTube Video Title: \n", (title) => generateMeta(title))
+rl.question("Thumbnail description: \n", (desc) => generateImage(desc))
